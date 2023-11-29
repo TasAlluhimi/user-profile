@@ -6,9 +6,9 @@ function Profile() {
 
     const user = localStorage.getItem('userProfile');
     
-        if (!user) {
-            navigate('/EnterProfile');
-        }
+        // if (!user) {
+        //     navigate('/');
+        // }
 
         const userData = JSON.parse(user);
 
@@ -35,14 +35,14 @@ function Profile() {
     <>
     <div className='flex justify-center flex-col items-center h-screen' style={{ backgroundColor: styles.backgroundColor, 
         fontSize: styles.fontSize }}>
-            
+
     <div className='bg-white w-96 flex items-center justify-center p-2'>
         {userData.Gender == 'Female' && (
             <img className='w-24' src="https://cdn-icons-png.flaticon.com/128/6997/6997662.png" alt="f" />
         )}
 
         {userData.Gender == 'Male' && (
-            <img src="https://cdn-icons-png.flaticon.com/128/236/236831.png" alt="m" />
+            <img className='w-24' src="https://cdn-icons-png.flaticon.com/128/236/236831.png" alt="m" />
         )}
 
     </div>
